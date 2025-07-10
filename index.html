@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JemoOaisi Survey</title>
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <link rel="stylesheet" href="style.css" />
+  </head>
+<body>
+  <h1>
+    <img src="images/logo.png" alt="JemoOaisi Logo" style="height: 80px; vertical-align: middle; margin-right: 8px;">
+    JemoOaisi Online Marketplace Survey
+  </h1>
+
+  <form id="surveyForm">
+
+    <label for="groupSelect">Which group best describes you?</label>
+    <select id="groupSelect" name="group" required>
+      <option value="">Select group</option>
+      <option value="productBuyer">Marketplace for Products — Buyers</option>
+      <option value="productVendor">Marketplace for Product Vendors</option>
+      <option value="serviceBuyer">Marketplace for Service Buyers</option>
+      <option value="serviceProvider">Marketplace for Service Providers</option>
+    </select>
+
+    <div id="productBuyer" class="section" style="display:none;">
+      <h2> Marketplace for Products — Buyers</h2>
+
+      <label>How often do you buy everyday products locally?</label>
+      <input type="text" name="buyFrequency" />
+
+      <label>What are your biggest challenges when finding these products near you?</label>
+      <textarea name="challenges"></textarea>
+
+      <label>Do you prefer to shop online or in-store? Why?</label>
+      <textarea name="shopPreference"></textarea>
+
+      <label>How far are you usually willing to travel to buy essential products?</label>
+      <input type="text" name="travelDistance" />
+
+      <label>Would you use an app that helps you find nearby products quickly?</label>
+      <select name="useApp">
+        <option>Yes</option>
+        <option>No</option>
+        <option>Maybe</option>
+      </select>
+
+      <label>What features would you love to see in a product discovery app? (select all that apply)</label>
+      <textarea name="desiredFeatures"></textarea>
+
+      <label>How important is same-day delivery for you?</label>
+      <select name="sameDay">
+        <option>Very important</option>
+        <option>Somewhat important</option>
+        <option>Not important</option>
+      </select>
+
+      <label>Would you prefer buying from:</label>
+      <select name="buyFrom">
+        <option>Small local shops</option>
+        <option>Supermarkets</option>
+        <option>Whichever is closer</option>
+        <option>Whichever is cheaper</option>
+      </select>
+
+      <label>What is your preferred method of payment?</label>
+      <textarea name="paymentMethod"></textarea>
+
+      <label>How important is seeing customer reviews before purchasing?</label>
+      <select name="reviewsImportance">
+        <option>Very important</option>
+        <option>Not important</option>
+      </select>
+    </div>
+
+    <div id="productVendor" class="section" style="display:none;">
+      <h2> Marketplace for Product Vendors</h2>
+
+      <label>What type of products do you sell?</label>
+      <input type="text" name="productType" />
+
+      <label>Where is your shop/store located?</label>
+      <input type="text" name="storeLocation" />
+
+      <label>How do you currently attract new customers?</label>
+      <textarea name="attractCustomers"></textarea>
+
+      <label>Are you interested in showcasing your products on a digital marketplace?</label>
+      <select name="showcase">
+        <option>Yes</option>
+        <option>No</option>
+        <option>Maybe</option>
+      </select>
+
+      <label>What features would make you excited to use a platform like this? (select all that apply)</label>
+      <textarea name="desiredVendorFeatures"></textarea>
+
+      <label>Would you offer delivery or click & collect if the platform supported it?</label>
+      <select name="deliveryOptions">
+        <option>Delivery</option>
+        <option>Pickup</option>
+        <option>Both</option>
+        <option>None</option>
+      </select>
+
+      <label>What challenges are you currently facing that a digital marketplace could solve?</label>
+      <textarea name="vendorChallenges"></textarea>
+
+      <label>Are you open to offering limited-time discounts or loyalty points to attract more customers?</label>
+      <textarea name="vendorDiscounts"></textarea>
+    </div>
+
+    <div id="serviceBuyer" class="section" style="display:none;">
+      <h2> Marketplace for Service Buyers</h2>
+
+      <label>What types of services do you use regularly? (select all that apply)</label>
+      <textarea name="serviceTypes"></textarea>
+
+      <label>What problems do you face when trying to find reliable service providers?</label>
+      <textarea name="serviceProblems"></textarea>
+
+      <label>Would you prefer booking services through an app?</label>
+      <select name="bookApp">
+        <option>Yes</option>
+        <option>No</option>
+        <option>Maybe</option>
+      </select>
+
+      <label>How important is at-home service delivery to you?</label>
+      <select name="homeServiceImportance">
+        <option>Must-have</option>
+        <option>Nice to have</option>
+        <option>Not important</option>
+      </select>
+
+      <label>How much are you willing to pay for premium at-home service?</label>
+      <input type="text" name="servicePayment" />
+
+      <label>Would you want to see service provider reviews and ratings before booking?</label>
+      <select name="seeReviews">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>What features would make you trust a service provider via an app? (select all that apply)</label>
+      <textarea name="trustFeatures"></textarea>
+
+      <label>Would you be interested in a subscription model for frequent services?</label>
+      <select name="serviceSubscription">
+        <option>Yes</option>
+        <option>No</option>
+        <option>Maybe</option>
+      </select>
+    </div>
+
+    <div id="serviceProvider" class="section" style="display:none;">
+      <h2> Marketplace for Service Providers</h2>
+
+      <label>What kind of services do you offer?</label>
+      <input type="text" name="offeredServices" />
+
+      <label>Do you currently offer home service or only at a fixed location?</label>
+      <input type="text" name="serviceLocation" />
+
+      <label>How do you find new customers today?</label>
+      <textarea name="findCustomers"></textarea>
+
+      <label>What features would help you grow your service business? (select all that apply)</label>
+      <textarea name="serviceFeatures"></textarea>
+
+      <label>Would you be interested in joining a service marketplace that connects you with local customers?</label>
+      <select name="joinMarketplace">
+        <option>Yes</option>
+        <option>No</option>
+        <option>Maybe</option>
+      </select>
+
+      <label>What would make you trust and adopt this platform over other ways of getting clients?</label>
+      <textarea name="platformTrust"></textarea>
+
+      <label>Are you open to offering discounts, referral bonuses, or service bundles?</label>
+      <textarea name="serviceDiscounts"></textarea>
+    </div>
+
+    <button type="submit">Submit Survey</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
